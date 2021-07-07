@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.roulette.MainActivity;
 import com.example.roulette.R;
 import com.example.roulette.database.Score;
 import com.example.roulette.database.ScoreListAdapter;
@@ -49,8 +50,8 @@ public class NotificationsFragment extends Fragment {
         addScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), AddScoreActivity.class);
-                startActivity(intent);
+                Intent intent=new Intent(getActivity().getBaseContext(), AddScoreActivity.class);
+                getActivity().startActivity(intent);
             }
         });
 
