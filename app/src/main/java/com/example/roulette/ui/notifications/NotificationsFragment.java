@@ -49,8 +49,8 @@ public class NotificationsFragment extends Fragment {
         addScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(v.getContext(), AddScoreActivity.class);
-                v.getContext().startActivity(intent);
+                Intent intent=new Intent(getActivity(), AddScoreActivity.class);
+                startActivity(intent);
             }
         });
 

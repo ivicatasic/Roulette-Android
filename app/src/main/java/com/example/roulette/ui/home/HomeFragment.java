@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
     TextView winBet;
     TextView black;
     TextView amount;
-    Timer timer = new Timer();
+
     // We create a Random instance to make our wheel spin randomly
     private static final Random RANDOM = new Random();
     private int degree = 0, degreeOld = 0;
@@ -138,7 +138,7 @@ public class HomeFragment extends Fragment {
         num19=root2.findViewById(R.id.num19);
         num20=root2.findViewById(R.id.num20);
 
-        timer = new Timer();
+
 
         return root;
     }
@@ -217,7 +217,7 @@ public class HomeFragment extends Fragment {
                 dashboardViewModel.setAmount(String.valueOf(amount1));
                 amount.setText(String.valueOf(amount1));
 
-              //  timer.schedule(new Timer1(),0,500);
+              clearBet();
 
             }
 
@@ -372,56 +372,51 @@ public class HomeFragment extends Fragment {
         return 0;
     }
 
-    public class Timer1 extends TimerTask {
+   public void clearBet(){
+       dashboardViewModel.setBet("0");
+       dashboardViewModel.setNum1("0");
+       dashboardViewModel.setNum2("0");
+       dashboardViewModel.setNum3("0");
+       dashboardViewModel.setNum4("0");
+       dashboardViewModel.setNum5("0");
+       dashboardViewModel.setNum6("0");
+       dashboardViewModel.setNum7("0");
+       dashboardViewModel.setNum8("0");
+       dashboardViewModel.setNum9("0");
+       dashboardViewModel.setNum10("0");
+       dashboardViewModel.setNum11("0");
+       dashboardViewModel.setNum12("0");
+       dashboardViewModel.setNum13("0");
+       dashboardViewModel.setNum14("0");
+       dashboardViewModel.setNum15("0");
+       dashboardViewModel.setNum16("0");
+       dashboardViewModel.setNum17("0");
+       dashboardViewModel.setNum18("0");
+       dashboardViewModel.setNum19("0");
+       dashboardViewModel.setNum20("0");
 
-
-        @Override
-        public void run() {
-            dashboardViewModel.setBet("0");
-            dashboardViewModel.setNum1("0");
-            dashboardViewModel.setNum2("0");
-            dashboardViewModel.setNum3("0");
-            dashboardViewModel.setNum4("0");
-            dashboardViewModel.setNum5("0");
-            dashboardViewModel.setNum6("0");
-            dashboardViewModel.setNum7("0");
-            dashboardViewModel.setNum8("0");
-            dashboardViewModel.setNum9("0");
-            dashboardViewModel.setNum10("0");
-            dashboardViewModel.setNum11("0");
-            dashboardViewModel.setNum12("0");
-            dashboardViewModel.setNum13("0");
-            dashboardViewModel.setNum14("0");
-            dashboardViewModel.setNum15("0");
-            dashboardViewModel.setNum16("0");
-            dashboardViewModel.setNum17("0");
-            dashboardViewModel.setNum18("0");
-            dashboardViewModel.setNum19("0");
-            dashboardViewModel.setNum20("0");
-
-            bet.setText("0");
-            num1.setText("0");
-            num2.setText("0");
-            num3.setText("0");
-            num4.setText("0");
-            num5.setText("0");
-            num6.setText("0");
-            num7.setText("0");
-            num8.setText("0");
-            num9.setText("0");
-            num10.setText("0");
-            num11.setText("0");
-            num12.setText("0");
-            num13.setText("0");
-            num14.setText("0");
-            num15.setText("0");
-            num16.setText("0");
-            num17.setText("0");
-            num18.setText("0");
-            num19.setText("0");
-            num20.setText("0");
-        }
-    }
+       bet.setText("0");
+       num1.setText("0");
+       num2.setText("0");
+       num3.setText("0");
+       num4.setText("0");
+       num5.setText("0");
+       num6.setText("0");
+       num7.setText("0");
+       num8.setText("0");
+       num9.setText("0");
+       num10.setText("0");
+       num11.setText("0");
+       num12.setText("0");
+       num13.setText("0");
+       num14.setText("0");
+       num15.setText("0");
+       num16.setText("0");
+       num17.setText("0");
+       num18.setText("0");
+       num19.setText("0");
+       num20.setText("0");
+   }
 
 
 
